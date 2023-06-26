@@ -1,0 +1,15 @@
+Proměnné (variables)
+https://trinket.io/embed/python/fd29806cc1
+Konečně se dostáváme k základům programování. Mezi základní stavební kameny každého programu patří proměnné (anglicky variables).
+Koncept proměnných (stejně jako mnoho ostatních konceptů v programování) je velmi podobný tomu v matematice. Proměnná, která má svůj název, nám drží nějakou hodnotu. My tedy dále nepracujeme již s hodnotou samotnou, nýbrž s proměnnou, která ji drží. Jak již název sám o sobě napovídá, tak proměnná může svou hodnotu měnit.
+Při pojmenování našich proměnných používáme deskriptivní názvy, chceme aby z názvu bylo jasné, co se v proměnné nachází. Jsou tu ale drobná omezení: v názvu nesmějí být použity mezery, a měli bychom se vyvarovat používání diakritiky. V tomto kurzu budeme používat styl pojmenování zvaný camelCase (tedy každé nové slovo začneme velkým písmenem). Preferovaný jazyk pro pojmenování je angličtina.
+Pojďme se již podívat na ukázku kódu, kde pracujeme s proměnnými.
+V první části vytváříme (deklarujeme) dvě proměnné: name1, age1. Do proměnné name1 si ukládáme textový řetězec "Lucie" a do proměnné age1 si ukládáme číslo 19.
+V druhé části si vytváříme další dvě proměnné: name2, age2. Do nich si ukládáme textový řetězec "Lukas" a číslo 20.
+Ve třetí části přecházíme k operacím s proměnnými. Operace, které můžeme s proměnnými provádět jsou určeny jejich datovým typem tedy druhem hodnoty, která je v nich uložená. Například zda se jedná o text, číslo, atd. . Jako první provádíme sečtení proměnných age1 a age2 a výsledek této operace uložíme do nové proměnné ageTogether.
+Jako další provádíme také operaci sčítání, ale na proměnných name1 a name2, u kterých víme, že jejich datovým typem je text (neboli string!). To se nám může zdát zvláštní, ale jedná se o naprosto validní operaci. Sčítání stringů (textových řetězců) znamená jejich spojení. Aby byl výsledek této operace trochu hezčí, tak jsme mezi name1 a name2 přidali textový řetězec (" and ") a výsledek uložili opět do nové proměnné. Zde vidíme, že operace nemusíme provádět jen s proměnnými, ale i s explicitně napsanými hodnotami!
+V další části si necháme 'vyprintit' naše 2 nově vzniklé proměnné, abychom viděli výsledek provedených operací.
+V poslední části pouze měníme hodnotu promměnné name1 a necháváme si 'vyprintit' novou hodnotu této proměnné společně s poznámkou, že se jedná o změněnou proměnnou.
+Spusťte kód tlačítkem 'Run', abyste viděli jeho výsledek.
+END
+Zkuste si s proměnnými trochu pohrát. Například si vyzkoušejte další matematické operace na číslech. Abyste si zobrazili výsledek, mužete kdykoliv použít funkci print.

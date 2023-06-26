@@ -1,0 +1,9 @@
+Python a programování
+X
+Python je vysokoúrovňový programovací jazyk vytvořený v roce 1991. V současné době (tj. v době psaní tohoto kurzu) je nejnovější verze Pythonu verze 3.11.
+Python podporuje různé programovací paradigmata (objěktově orientovaný, imperativní či funkcionální) a nabízí dynamickou kontrolu datových typů (více k datovým později).
+V současné době se jedná o jeden z nejpopulárnějších programovacích jazyků a má uplatnění ve velké šířce oborů (například datová analýza či strojové učení).
+A co je to vlastně to programování? Programování není jen bouchání do klávesnice. Úkolem programátora je zanalyzovat zadaný problém, vymyslet optimální řešení daného problému, toto řešení poté převést do instrukcí srozumitelných počítači (tedy přepsat do nějakého programovacího jazyku) a nakonec celý 'program' odladit, aby fungoval tak jak má. Cílem tohoto kurzu bude seznámit se se základy jazyku Python a osvojit si základní znalosti programování. Znalosti, které se naučíte si budete moci ověřit v sekci výzvy, kde pro vás budou zadané jednoduché úlohy, které budete muset zanalyzovat a pomocí jazyku Python vyřešit.
+END
+Veškeré koncepty, které budou v tomto kurzy probírány, si budeme sice ukazovat v jazyce Python, ale jsou to koncepty společné pro víceméně všechny programovací jazyky.
+Abych o Pythonu jen tak nepsal, tak bych rád podotknul, že i tato webová aplikace je celá napsaná v Pythonu pomocí frameworku Flask.

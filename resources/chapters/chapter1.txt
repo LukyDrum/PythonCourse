@@ -1,0 +1,11 @@
+Příkaz 'print'
+https://trinket.io/embed/python/c30bb3b825
+Ještě než se začneme učit o jednotlivých prvcích jazyka Python (které jsou ale společné s velkou většinou programovacích jazyků), tak se podíváme na jeden veledůležitý příkaz, a to příkaz 'print' (jedná se o jednu ze základních funkcí, ale k funkcím se dostaneme až později).
+Co tento příkaz dělá je velmi jednoduché: "Cokoliv je mým argumentem, to ukážu na výstupu". Argumentem mamé namysli to, co je napsané v kulatých závorkách za příkazem (může zde být explicitně něco napsáno, nebo zde může být i proměnná - k těm se již velmi brzy dostaneme).
+Tento příkaz (funkce) budeme využívat velmi často abychom si ověřili výsledek našeho programu.
+V interaktivním okně níže si vyzkoušejte, jak funkce 'print' funguje. Pro spuštění kódu klikněte na tlačítko 'Run'.
+END
+Jak vídíme, tak po spuštění máme na výstupu text "Hello World!".
+Zkuste si změnit textový řetězec (tedy text v uvozovkách) v argumentu na něco jiného a opět spusťte program. Váš nový text by se měl zobrazit na výstupu.
+Pokud by editor hlásil chybu, zkontrolujte si, že text v argumentu je uzavřen v uvozovkách.
+Poznámka: Prvního řádku v kódu není třeba si všimat. Nás zajímá pouze kód, který se nachází za řádkem 'CODE'.
