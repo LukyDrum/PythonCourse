@@ -1,0 +1,18 @@
+List (seznam)
+https://trinket.io/embed/python/2492181c73
+V této kapitole se podíváme na List.
+List patří v Pythonu mezi složené datové typy. Nikoliv primitivní typy, jako jsme si ukazovali doteď.
+List, neboli česky seznam, je typ, který nám může sdružovat více než jednu hodnotu. Hodnoty do Listu můžeme přidávat a odebírat a můžeme je číst a upravovat.
+Pro vytvoření nového Listu napíšeme několik hodnot oddělených čárkou a uzavřeme je do hranatých závorek. Můžeme napsat i pouze hranaté závorky (bez hodnot) pro vytvoření prázdného listu.
+Pro zpřístupnění hodnotu v Listu využíváme indexy. Indexy jednotlivých hodnot v listu začínají od 0. Tedy první prvek v Listu má index = 0 a poslední prvek v Listu má index = (počet prvků - 1).
+Pro přidání nového prvku do Listu voláme na Listu metodu 'append' a jako argument ji dáváme prvek, který chceme přidat.
+Pro odebrání prvku z Listu voláme na Listu metodu 'pop' a jako argument ji dáváme index prvku, který chceme odebrat.
+Pojďme se podívat na ukázku kódu pracujícího s Listy.
+Hned na začátku vytváříme List people obsahující několik jmen. Ten si následně i s jeho délkou necháme vytisknout. Pro zjištění délky Listu (počet prvků) opět používáme metodu 'len'.
+Dále z Listu čteme prvek s indexem 0 (pro přístup k němu používáme hranaté závroky s indexem) a hodnotu si ukládáme do proměnné. Tu si poté necháme vytisknout.
+V další části nastavujeme hodnotu prvku v Listu s indexem 2 na novou hodnotu, stejně jako bychom nastavovali hodnotu proměnné.
+Dále do Listu přidáváme novou hodnotu pomocí metody 'append'. Zde vidíme, že se také jedná o funkci (jako jsme měli print a len), ale voláme ji přímo na proměnné držící náš List (pomocí tečky za proměnou). Jako argument ji dáváme hodnotu, kterou chceme přidat.
+V poslední části odstraňujeme z Listu prvek s indexem 0 pomocí metody 'pop' (opět tuto funkci/metodu voláme na proměnné držící List stejně jako tomu bude u 'append').
+END
+Nyní jsme se již seznámili se základní prací s Listy v Pythonu.
+Je nutné podotknout, že mnoho konceptů, jako je volání funkcí, či dokonce volání metod (append, pop), zatím budeme chápat pouze intuitivně a budeme se s nimi zatím učit jen zacházet bez toho, abychom se ptali jak to vlastně funguje. K tomu zatím nemáme dostatečné znalosti, ale již brzy se i k podrobnému vysvětlení těchto konceptů dostaneme.
