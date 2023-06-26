@@ -47,3 +47,7 @@ def challenge(id):
 @app.route("/overview")
 def overview():
     return render_template("overview.html")
+
+@app.route("/playground")
+def playground():
+    return render_template("playground.html")
