@@ -1,0 +1,9 @@
+Čísla a písmenka
+https://trinket.io/embed/python/4975677de7
+44620
+Vítejte u první výzvy. Nyní si procvičíte znalosti z kapitol 1 až 4, tedy práci s proměnnými a různými datovými typy.
+Vaším úkolem bude nejprve spočítat číslo X.
+Číslo X je zadáno takto:
+X = ((256 * 48) / 24) - 420
+Následně spočítejte délku zadaného řetězce 'string' vynásobenou číslem X (to je odpověď výzvy).
+Nenechte se rozhodit divným zápisem řetězce. Jedná se o několika řádkový string, ten je značen pomocí 3 uvozovek.

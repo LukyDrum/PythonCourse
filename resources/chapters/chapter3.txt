@@ -1,18 +1,15 @@
-Datové typy
-https://trinket.io/embed/python/57aa4bdc7f
-Jak jsme již dříve nakousli, tak při programování pracujeme s různými datovými typy. To je naprosto logické, někdy je potřeba pracovat s textem, někdy s čísly, s pravdivostními hodnotami, a tak dále. Datový typ nám tedy říká jakého typu je daná hodnota a určuje nám množinu operací, které s touto hodnotou lze provádět (například je nesmysl násobit dva textové řetězce, ale u čísel se jedná o zcela běžnou operaci).
-V Pythonu máme 4 základní datové typy se kterými budeme pracovat. Těmi jsou Integer, Float, String a Boolean. Pojďme se na ně podívat.
-Integer (int): Reprezentuje celé číslo (se znaménkem či bez). Patří mezi číselné datové typy. Například číslo 42 je typu int.
-Float: Reprezentuje číslo s desetinnou čárkou (se znaménkem či bez). Název je odvozen z anglického 'floating-point number' (číslo s plovoucí desetinnou čárkou). Také patří mezi číselné datové typy. Například číslo 12.55 je typu float.
-String (str): Reprezentuje textový řetězec (text). Textový řetězec vždy zapisujeme do uvozovek. Například textový řetězec "Hello there!" je typu string.
-Boolean (bool): Reprezentuje pravdivostní hodnotu. Může tedy nabývat pouze hodnot True (1) nebo False (0).
-Pojďme se podívat na ukázku kódu.
-V první části deklarujeme proměnnou každého typu, který jsme si výše uvedli. Popořadě to tedy je: Integer, Float, String a Boolean. Tyto proměnné si následně necháme vypsat. Zde se možné zarazíte, co se to děje s funkcí print, předáváme ji totiž rovnou několik argumentů. V případě, kdy funkci print předáme více argumentů, tak je vytiskne všechny. My ji tedy předáváme naše 4 proměnné a jako poslední argument nastavujeme takzvaný separátor na ", ". To znamená, že jednotlivé hodnoty proměnných ve výpisu budou odděleny pomocí ", " (defaultně je nastavena pouze mezera - " "), čímž bude výpis přehlednější.
-V následujícím printu jsou ukázány základní aritmetické operace s číselnými datovými typy (sčítání, odčítání, násobení, dělení).
-V dalším printu se podíváme na dělení a celočíselné dělení. Máme celé číslo (int) a v obou případech ho dělíme číslem 10. V prvním případě používáme klasické dělení (výsledek tedy může být s desetinnou čárkou -> 4.2 v tomto případě). V druhém případě používáme celočíselné dělení (značíme //) a výsledkem této operace je vždy celé číslo (v tomto případě 4).
-Další operací, kterou s čísly můžeme provádět, je je porovnávat. Výsledkem porovnávání je vždy pravdivostní hodnota (bool). Používáme následující porovnání a značení: rovnost (==), nerovnost (!=), menší než (<), menší rovno než (<=), vetší než (>), větší rovno než (>=). Tyto operace fungují stejně jako v matematice.
-Dále si ukazujeme operace s textovými řetězci. To je tedy spojování řetězců pomocí znaménka plus (+) a nově si ukážeme zjištění délky řetězce pomocí funkce 'len' a násobení řetězce celým číslem pomocí znaku násobení (*). Pro zjištení délky řetězce musíme zavolat funkci 'len' a jako argument ji poskytnout náš řetězec (je to podobné jako když používáme funkci print). Dále si ukážeme násobení. Výsledkem takového násobení je zopakování textového řetězce zadaným počtem (například 3krát).
-Poslední jsou operace s pravdivostními hodnotami (bool). Těmi jsou: negace, logický součin (AND) a logický součet (OR). Výsledky těchto operací jsou stejné jako by byly v matematice. Negaci značíme pomocí slovíčka 'not', logický součin pomocí slovíčka 'and' a logický součet pomocí sloviíčka 'or'.
+Proměnné (variables)
+https://trinket.io/embed/python/fd29806cc1
+Konečně se dostáváme k základům programování. Mezi základní stavební kameny každého programu patří proměnné (anglicky variables).
+Koncept proměnných (stejně jako mnoho ostatních konceptů v programování) je velmi podobný tomu v matematice. Proměnná, která má svůj název, nám drží nějakou hodnotu. My tedy dále nepracujeme již s hodnotou samotnou, nýbrž s proměnnou, která ji drží. Jak již název sám o sobě napovídá, tak proměnná může svou hodnotu měnit.
+Při pojmenování našich proměnných používáme deskriptivní názvy, chceme aby z názvu bylo jasné, co se v proměnné nachází. Jsou tu ale drobná omezení: v názvu nesmějí být použity mezery, a měli bychom se vyvarovat používání diakritiky. V tomto kurzu budeme používat styl pojmenování zvaný camelCase (tedy každé nové slovo začneme velkým písmenem). Preferovaný jazyk pro pojmenování je angličtina.
+Pojďme se již podívat na ukázku kódu, kde pracujeme s proměnnými.
+V první části vytváříme (deklarujeme) dvě proměnné: name1, age1. Do proměnné name1 si ukládáme textový řetězec "Lucie" a do proměnné age1 si ukládáme číslo 19.
+V druhé části si vytváříme další dvě proměnné: name2, age2. Do nich si ukládáme textový řetězec "Lukas" a číslo 20.
+Ve třetí části přecházíme k operacím s proměnnými. Operace, které můžeme s proměnnými provádět jsou určeny jejich datovým typem tedy druhem hodnoty, která je v nich uložená. Například zda se jedná o text, číslo, atd. . Jako první provádíme sečtení proměnných age1 a age2 a výsledek této operace uložíme do nové proměnné ageTogether.
+Jako další provádíme také operaci sčítání, ale na proměnných name1 a name2, u kterých víme, že jejich datovým typem je text (neboli string!). To se nám může zdát zvláštní, ale jedná se o naprosto validní operaci. Sčítání stringů (textových řetězců) znamená jejich spojení. Aby byl výsledek této operace trochu hezčí, tak jsme mezi name1 a name2 přidali textový řetězec (" and ") a výsledek uložili opět do nové proměnné. Zde vidíme, že operace nemusíme provádět jen s proměnnými, ale i s explicitně napsanými hodnotami!
+V další části si necháme 'vyprintit' naše 2 nově vzniklé proměnné, abychom viděli výsledek provedených operací.
+V poslední části pouze měníme hodnotu promměnné name1 a necháváme si 'vyprintit' novou hodnotu této proměnné společně s poznámkou, že se jedná o změněnou proměnnou.
+Spusťte kód tlačítkem 'Run', abyste viděli jeho výsledek.
 END
-V této kapitole jsme si vysvětlili, co to datový typ je, a jaké základní datové typy budeme používat. Ukázali jsme si také různé operace s jednotlivými datovými typy, včetně funkce 'len' pro zjištění délky řetězce.
-Nyní byste již měli mít dostatečné znalosti pro vaši první výzvu. Až budete připraveni, běžte do sekce Výzvy a zkuste vyřešit výzvu číslo 1.
+Zkuste si s proměnnými trochu pohrát. Například si vyzkoušejte další matematické operace na číslech. Abyste si zobrazili výsledek, mužete kdykoliv použít funkci print.
