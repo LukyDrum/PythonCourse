@@ -1,12 +1,12 @@
 from flask import Flask, render_template
 from chapter import Chapter
 from random import randint
-from os import listdir, getcwd
+from os import listdir, path
 
 
 app = Flask(__name__)
 
-appPath = getcwd()
+appPath = path.dirname(path.abspath(__file__))
 numOfChaps: int = len(listdir(f"{appPath}/resources/chapters/"))
 chaps: list[Chapter] = [Chapter(x, x == 0, x == numOfChaps-1) for x in range(numOfChaps)]
 

@@ -1,4 +1,4 @@
-from os import getcwd
+from os import path
 
 
 class Chapter:
@@ -7,7 +7,7 @@ class Chapter:
         self.isFirst: bool = isFirst
         self.isLast: bool = isLast
 
-        appPath = getcwd()
+        appPath = path.dirname(path.abspath(__file__))
         path: str = f"{appPath}/resources/chapters/chapter{id}.txt"
         content: list[str] = []
         with open(path, "r") as f:
