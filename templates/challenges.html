@@ -24,11 +24,11 @@
     <h1>Výzvy</h1>
 
     <ul class="list-group list-group-flush">
-    <!--
-    {% for chap in chapters %}
-        <li class="list-group-item"> <a href="{{ url_for('chapter', id=chap.id) }}">{{ chap.id }}. {{ chap.title }}</a> </li>
+    
+    {% for chall in challenges %}
+        <li class="list-group-item"> <a href="{{ url_for('challenge', id=chall.id) }}">{{ chall.id }}. {{ chall.title }}</a> </li>
     {% endfor %}
-    -->
+    
     </ul>
 
 

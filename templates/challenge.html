@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Výzva {{ challenge.id }}: {{ challenge.title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  
+    <style>
+        .loading {
+            background: url(../resources/loading.gif) center center no-repeat;
+        }
+    </style>
+
+</head>
+<body class="container">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Úvodní strana</a>
+                <a class="nav-link" href="{{ url_for('chapters') }}">Kapitoly</a>
+                <a class="nav-link active" href="{{ url_for('challenges') }}">Výzvy</a>
+                <a class="nav-link" href="{{ url_for('overview') }}">Přehled</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <h1>{{ challenge.title }}</h1>
+
+    {% for par in challenge.bodyContent %}
+        <p>{{ par }}</p>
+    {% endfor %}
+
+    {% if challenge.hasTrinket %}
+        <div class="loading">
+            <iframe src="{{ challenge.trinket }}" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        </div>
+    {% endif %}
+
+    {% if state == 1 %}
+        <div class="alert alert-success" role="alert">
+            Výborně! {{ challenge.answer }} je správná odpověď.
+        </div>
+    {% endif %}
+    {% if state == 2 %}
+        <div class="alert alert-danger" role="alert">
+            Bohužel jste odpověděli špatně.
+        </div>
+    {% endif %}
+    
+    <form method="post">
+        <div class="mb-3">
+            <label for="answer" class="form-label">Vaše odpověď (vždy celé číslo):</label>
+            <input name="answer" type="number" class="form-control" id="answer" aria-describedby="answer">
+        </div>
+        <button type="submit" class="btn btn-primary">Odeslat</button>
+    </form>
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

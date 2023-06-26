@@ -1,16 +1,18 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from chapter import Chapter
+from challenge import Challenge
 from random import randint
 from os import listdir, path
 
 
 app = Flask(__name__)
-
 appPath = path.dirname(path.abspath(__file__))
+
 numOfChaps: int = len(listdir(f"{appPath}/resources/chapters/"))
-chaps: list[Chapter] = [Chapter(x, x == 0, x == numOfChaps-1) for x in range(numOfChaps)]
+chaps: list[Chapter] = [Chapter(x, x == 1, x == numOfChaps) for x in range(1, numOfChaps + 1)]
 
-
+numOfChalls: int = len(listdir(f"{appPath}/resources/challenges/"))
+challs: list[Challenge] = [Challenge(x) for x in range(1, numOfChalls + 1)]
 
 
 @app.route("/")
@@ -25,12 +27,21 @@ def chapters():
 
 @app.route("/chapters/chapter<id>")
 def chapter(id):
-    return render_template("chapter.html", chapter = chaps[int(id)])
+    return render_template("chapter.html", chapter = chaps[int(id) - 1])
 
 
 @app.route("/challenges")
 def challenges():
-    return render_template("challenges.html")
+    return render_template("challenges.html", challenges = challs)
+
+@app.route("/challenges/challenge<id>", methods = ["GET", "POST"])
+def challenge(id):
+    # States: 0 (no answer), 1 (correct answer), 2 (wrong answer)
+    state = 0
+    if (request.method == "POST"):
+        if (int(request.form["answer"]) == challs[int(id) - 1].answer): state = 1
+        else: state = 2
+    return render_template("challenge.html", challenge = challs[int(id) - 1], state = state)
 
 
 @app.route("/overview")
