@@ -8,9 +8,9 @@ class Chapter:
         self.isLast: bool = isLast
 
         appPath = path.dirname(path.abspath(__file__))
-        path: str = f"{appPath}/resources/chapters/chapter{id}.txt"
+        resPath: str = f"{appPath}/resources/chapters/chapter{id}.txt"
         content: list[str] = []
-        with open(path, "r") as f:
+        with open(resPath, "r") as f:
             content = [l.strip("\n") for l in f.readlines()]
 
         self.title: str = content.pop(0)
