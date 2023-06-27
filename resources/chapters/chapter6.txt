@@ -1,0 +1,17 @@
+Podmíněné příkazy (if-else)
+https://trinket.io/embed/python/3c3124f06e
+Konečně se dostáváme prvnímu konceptu, který z našich programů udělá něco více než jen hloupou kalkulačku. V této kapitole se koukneme na podmíněné příkazy. Také zde využijeme, to co jsme se naučili v předchozích lekcích. Hlavně zde využijeme pravidivostní hodnoty (bool) a schopnost porovnat číselné typy.
+Cílem podmíněných příkazů je vykonat nějaký kus (blok) kódu pouze v případě, že je splněna nějaká podmínka. Podmínka je v případě podmíněných příkazů vždy pravdivostní hodnota nebo výraz, jehož výsledkem je pravdivostní hodnota (např. porovnávání čísel či logické operace mezi booly).
+Používáme konstrukci 'if (podminka), elif (podminka), else' (elif ani else nemusí být po if přítomny). Pokud je splněna podmínka v 'if' (má pravdivostní hodnotu True), pak je proveden kód v bloku 'if' a ostatní bloky (elif, else) jsou vynechány. Pokud podmínka v 'if' není splněna, tak se pokračuje k podmínce v 'elif' (těch může být i několik za sebou), pokud je zde splněna podmínka, pak je proved kód v bloku daného 'elif'. Pokud je přítomen i blok 'else', pak ten je proveden pouze pokud všechny přechozí 'if' a 'elif' provedeny nebyly (tedy jejich podmínky nebyly splněny).
+Do češtiny by se to tedy dalo přeložit zhruba takto: "(if) Pokud byla splněna podmínka A, pak udělej tohle. (elif) Jinak pokud byla splněna podmínka B, tak udělej tohle. (else) Jinak udělej tohle."
+Teď se už ale podívejme na kód, kde to půjde vše lépe pochopit.
+V první části si vytváříme dvě proměnné typu čísel.
+Teď přicházíme k podmíněným příkazům. Všimněte si, že kód, který je v jednotlivých blocích, MUSÍ být odsazen pomocí tabulátoru! V prvním 'if' zjišťujeme, zda jsou num1 a num2 stejná, to nejsou takže se posuneme na 'elif'. Zde zjišťujeme, zda je num1 menší než num2. To není takže postupujeme na 'else'. U 'else' se již žádná podmínka nepoužívá, takže se provede kód v bloku else (je tomu tak vždycky, když nejsou splněny přechozí podmínky).
+Dále si nastavíme hodnotu num1, aby byla rovna hodnotě num2.
+Opět je zde použit identický if-else konstrukt jako ten minulý. Jelikož již teď platí, že num1 se rovná num2, tak je splněna podmínka v 'if' a je proveden kód v bloku if.
+Nakonec si ještě ukažme, že nemusíme mít vždy if-elif-else konstrukci. Můžeme klidně použít pouze if (či klidně if-elif, if-else). V tomto případě však není splněna podmínka v 'if' a není proveden žádný kód.
+END
+Prohlédněte si pořádně syntaxi zápisu podmíněných příkazů. Ta se skládá z: klíčového slova (if, elif, else), podmínky (ta může, ale nemusí být zapsána v závorkách), dvojtečky (ta říká, že teď již začíná kód patřící do daného bloku) a kódu odsazeného pomocí tabulátoru. Kód je považován součástí bloku pouze do té doby, dokud je odsazený.
+V bloku kódu může být libovolný počet příkazů (nemusí být pouze jeden).
+Porovnávat můžeme i textové řetězce. Můžeme se ptát zda jsou stejné (==) či zda jsou rozdílné (!=).
+Zkuste se podívat na výzvu číslo 2, kde si procvičíte práci s podmíněnými výrazi.
