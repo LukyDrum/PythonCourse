@@ -14,9 +14,10 @@ class Chapter:
             content = [l.strip("\n") for l in f.readlines()]
 
         self.title: str = content.pop(0)
-        self.trinket: str = content.pop(0)
+        self.codeSource: str = f"chapter{self.id}.py"
+        self.hasCode: bool = path.exists(f"{appPath}/static/{self.codeSource}")
 
-        self.hasTrinket: bool = (self.trinket != "X")
+        
 
         self.bodyContent: list[str] = []
         self.endContent: list[str] = []

@@ -6,11 +6,8 @@
     <title>Kapitola {{ chapter.id }}: {{ chapter.title }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   
-    <style>
-        .loading {
-            background: url(../resources/loading.gif) center center no-repeat;
-        }
-    </style>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 
 </head>
 <body class="container">
@@ -34,10 +31,24 @@
         <p>{{ par }}</p>
     {% endfor %}
 
-    {% if chapter.hasTrinket %}
-        <div class="loading">
-            <iframe src="{{ chapter.trinket }}" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <!--Code Editor-->
+    {% if chapter.hasCode %}
+        <py-config>
+            terminal = false
+        </py-config>
+
+        <div class="container">
+            <button class="btn btn-primary" id="runCodeBtn">Run</button>
+            <div class="row">
+                <div style="margin-right: 3rem" class="col-md-8">
+                    <py-repl id="my-repl" output="codeOutput" src="{{ url_for('static', filename=chapter.codeSource) }}"> </py-repl>
+                    <div id="output" class="p-4"></div>
+                </div>
+                <div id="codeOutput" class="col-md"></div>
+            </div>
         </div>
+
+        
     {% endif %}
 
     {% for par in chapter.endContent %}
@@ -64,5 +75,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='pythonEditor.js') }}"></script>
 </body>
 </html>

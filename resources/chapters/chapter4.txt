@@ -1,5 +1,4 @@
 Datové typy
-https://trinket.io/embed/python/57aa4bdc7f
 Jak jsme již dříve nakousli, tak při programování pracujeme s různými datovými typy. To je naprosto logické, někdy je potřeba pracovat s textem, někdy s čísly, s pravdivostními hodnotami, a tak dále. Datový typ nám tedy říká jakého typu je daná hodnota a určuje nám množinu operací, které s touto hodnotou lze provádět (například je nesmysl násobit dva textové řetězce, ale u čísel se jedná o zcela běžnou operaci).
 V Pythonu máme 4 základní datové typy se kterými budeme pracovat. Těmi jsou Integer, Float, String a Boolean. Pojďme se na ně podívat.
 Integer (int): Reprezentuje celé číslo (se znaménkem či bez). Patří mezi číselné datové typy. Například číslo 42 je typu int.

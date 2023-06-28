@@ -1,5 +1,4 @@
 List (seznam)
-https://trinket.io/embed/python/2492181c73
 V této kapitole se podíváme na List.
 List patří v Pythonu mezi složené datové typy. Nikoliv primitivní typy, jako jsme si ukazovali doteď.
 List, neboli česky seznam, je typ, který nám může sdružovat více než jednu hodnotu. Hodnoty do Listu můžeme přidávat a odebírat a můžeme je číst a upravovat.

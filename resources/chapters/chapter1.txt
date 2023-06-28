@@ -1,5 +1,4 @@
 Python a programování
-X
 Python je vysokoúrovňový programovací jazyk vytvořený v roce 1991. V současné době (tj. v době psaní tohoto kurzu) je nejnovější verze Pythonu verze 3.11.
 Python podporuje různé programovací paradigmata (objěktově orientovaný, imperativní či funkcionální) a nabízí dynamickou kontrolu datových typů (více k datovým později).
 V současné době se jedná o jeden z nejpopulárnějších programovacích jazyků a má uplatnění ve velké šířce oborů (například datová analýza či strojové učení).

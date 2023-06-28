@@ -1,5 +1,4 @@
 Proměnné (variables)
-https://trinket.io/embed/python/fd29806cc1
 Konečně se dostáváme k základům programování. Mezi základní stavební kameny každého programu patří proměnné (anglicky variables).
 Koncept proměnných (stejně jako mnoho ostatních konceptů v programování) je velmi podobný tomu v matematice. Proměnná, která má svůj název, nám drží nějakou hodnotu. My tedy dále nepracujeme již s hodnotou samotnou, nýbrž s proměnnou, která ji drží. Jak již název sám o sobě napovídá, tak proměnná může svou hodnotu měnit.
 Při pojmenování našich proměnných používáme deskriptivní názvy, chceme aby z názvu bylo jasné, co se v proměnné nachází. Jsou tu ale drobná omezení: v názvu nesmějí být použity mezery, a měli bychom se vyvarovat používání diakritiky. V tomto kurzu budeme používat styl pojmenování zvaný camelCase (tedy každé nové slovo začneme velkým písmenem). Preferovaný jazyk pro pojmenování je angličtina.
