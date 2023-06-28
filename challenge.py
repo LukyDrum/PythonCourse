@@ -12,10 +12,10 @@ class Challenge:
             content = [l.strip("\n") for l in f.readlines()]
 
         self.title: str = content.pop(0)
-        self.trinket: str = content.pop(0)
         self.answer: int = int(content.pop(0))
 
-        self.hasTrinket: bool = (self.trinket != "X")
+        self.codeSource: str = f"challenge{self.id}.py"
+        self.hasCode: bool = path.exists(f"{appPath}/static/{self.codeSource}")
 
         self.bodyContent: list[str] = []
 

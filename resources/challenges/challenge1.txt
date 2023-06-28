@@ -1,5 +1,4 @@
 Čísla a písmenka
-https://trinket.io/embed/python/4975677de7
 44620
 Vítejte u první výzvy. Nyní si procvičíte znalosti z kapitol 1 až 4, tedy práci s proměnnými a různými datovými typy.
 Vaším úkolem bude nejprve spočítat číslo X.
