@@ -28,7 +28,7 @@ def codeEditor(name: str):
         for chap in chaps:
             if chap.name == name: defaultCode = chap.defaultCode
         for chall in challs:
-            if chall.name == name: defaultCode = chap.defaultCode
+            if chall.name == name: defaultCode = chall.defaultCode
 
     return render_template("codeEditor/codeEditor.html", name = name, defaultCode = defaultCode)
 
@@ -56,7 +56,7 @@ def challenge(id):
         defaultCode = ""
     with open(f"{appPath}/static/{challs[int(id) - 1].codeSource}", "r") as src:
         defaultCode = src.read()
-    return render_template("challenge.html", challenge = challs[int(id) - 1], state = state, defaultCode = defaultCode)
+    return render_template("challenge.html", challenge = challs[int(id) - 1], state = state)
 
 
 @app.route("/overview")
