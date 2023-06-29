@@ -4,6 +4,7 @@ from os import path
 class Challenge:
     def __init__(self, id: int) -> None:
         self.id: int = id
+        self.name: str = f"challenge{self.id}"
 
         appPath = path.dirname(path.abspath(__file__))
         resPath: str = f"{appPath}/resources/challenges/challenge{id}.txt"
@@ -16,6 +17,12 @@ class Challenge:
 
         self.codeSource: str = f"challenge{self.id}.py"
         self.hasCode: bool = path.exists(f"{appPath}/static/{self.codeSource}")
+
+        try:
+            with open(f"{appPath}/static/{self.codeSource}", "r") as src:
+                self.defaultCode = src.read()
+        except FileNotFoundError:
+            self.defaultCode = ""
 
         self.bodyContent: list[str] = []
 

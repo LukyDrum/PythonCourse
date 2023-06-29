@@ -21,6 +21,18 @@ def home():
     return render_template("home.html", num = num)
 
 
+@app.route("/codeEditor/<name>")
+def codeEditor(name: str):
+    defaultCode = ""
+    if name != "playground":
+        for chap in chaps:
+            if chap.name == name: defaultCode = chap.defaultCode
+        for chall in challs:
+            if chall.name == name: defaultCode = chap.defaultCode
+
+    return render_template("codeEditor.html", name = name, defaultCode = defaultCode)
+
+
 @app.route("/chapters")
 def chapters():
     return render_template("chapters.html", chapters = chaps)

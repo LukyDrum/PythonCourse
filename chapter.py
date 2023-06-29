@@ -6,6 +6,7 @@ class Chapter:
         self.id: int = id
         self.isFirst: bool = isFirst
         self.isLast: bool = isLast
+        self.name: str = f"chapter{self.id}"
 
         appPath = path.dirname(path.abspath(__file__))
         resPath: str = f"{appPath}/resources/chapters/chapter{id}.txt"
@@ -17,7 +18,11 @@ class Chapter:
         self.codeSource: str = f"chapter{self.id}.py"
         self.hasCode: bool = path.exists(f"{appPath}/static/{self.codeSource}")
 
-        
+        try:
+            with open(f"{appPath}/static/{self.codeSource}", "r") as src:
+                self.defaultCode = src.read()
+        except FileNotFoundError:
+            self.defaultCode = ""
 
         self.bodyContent: list[str] = []
         self.endContent: list[str] = []

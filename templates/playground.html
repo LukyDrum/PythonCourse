@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Playground</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  </head>
+    </head>
   <body class="container">
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -26,9 +26,14 @@
 
     <p>Místo kde si můžete jen tak programovat v Pythonu.</p>
 
-    <iframe src="https://trinket.io/embed/python/12d2fb3180" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <iframe src="{{ url_for('codeEditor', name='playground') }}" width="100%" height="600px" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>
+        window.onerror = function(error, url, line) {
+            console.log("ERR");
+        };
+    </script>
   </body>
 </html>

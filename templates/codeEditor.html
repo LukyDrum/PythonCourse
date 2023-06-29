@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+    <py-config>
+        terminal = false
+    </py-config>
+    
+    <div class="card m-y-2">
+        
+        <div class="card-body">
+            <div class="row">
+                <div style="margin-right: 3rem" class="col-md-8">
+                    <div class="row">
+                        <h4 class="col-6">Code Editor:</h3>
+                        <button class="btn btn-primary col m-2" id="saveCodeBtn">Save</button>
+                        <button class="btn btn-primary col m-2" id="resetCodeBtn">Reset</button>
+                        <button class="btn btn-primary col m-2" id="runCodeBtn">Run</button>
+                    </div>
+    
+                    <py-repl id="my-repl" output="codeOutput">
+                        {{ defaultCode }}
+                    </py-repl>
+    
+                    <button class="btn btn-primary m-2" id="downloadBtn">Download</button>
+                </div>
+                <div class="col-md m-t-2">
+                    <h4 class="col-md">Output:</h3>
+                    <div id="codeOutput"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <py-script>
+        import js
+    
+        storedCode = js.getStoredCode()
+        if storedCode != None:
+            Element('my-repl').write(storedCode)   
+    </py-script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>
+        function saveCode() {
+            code = document.getElementById("my-repl").getPySrc();
+            localStorage.setItem("{{ name }}", code);
+        }
+
+        function getStoredCode() {
+            var codeInStorage = localStorage.getItem("{{ name }}");
+            return codeInStorage;
+        }
+
+        function removeStoredCode() {
+            localStorage.removeItem("{{ name }}");
+        }
+
+        function clearOutput() {
+            document.getElementById("codeOutput").innerHTML = "";
+        }
+
+        function runCode() {
+            clearOutput();
+            document.getElementsByClassName("py-repl-run-button")[0].dispatchEvent(new MouseEvent("click"));
+        }
+
+        function downloadCode() {
+            code = document.getElementById("my-repl").getPySrc();
+
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(code));
+            element.setAttribute('download', "{{ name }}.py");
+
+            element.style.display = 'none';
+            document.body.appendChild(element);
+
+            element.click();
+
+            document.body.removeChild(element);
+        }
+
+
+        window.onerror = function(error, url, line) {
+            console.log("ERR");
+        };
+
+        document.getElementById("saveCodeBtn").addEventListener("click", (event) => {
+            saveCode();
+        });
+
+        document.getElementById("runCodeBtn").addEventListener("click", (event) => {
+            saveCode();
+            runCode();
+        });
+
+        document.getElementById("resetCodeBtn").addEventListener("click", (event) => {
+            removeStoredCode();
+            location.reload();
+        });
+
+        document.getElementById("downloadBtn").addEventListener("click", (event) => {
+            downloadCode();
+        });
+    </script>
+</body>
+</html>
