@@ -13,4 +13,3 @@ END
 Prohlédněte si pořádně syntaxi zápisu podmíněných příkazů. Ta se skládá z: klíčového slova (if, elif, else), podmínky (ta může, ale nemusí být zapsána v závorkách), dvojtečky (ta říká, že teď již začíná kód patřící do daného bloku) a kódu odsazeného pomocí tabulátoru. Kód je považován součástí bloku pouze do té doby, dokud je odsazený.
 V bloku kódu může být libovolný počet příkazů (nemusí být pouze jeden).
 Porovnávat můžeme i textové řetězce. Můžeme se ptát zda jsou stejné (==) či zda jsou rozdílné (!=).
-Zkuste se podívat na výzvu číslo 2, kde si procvičíte práci s podmíněnými výrazi.
