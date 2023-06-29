@@ -16,10 +16,10 @@ class Chapter:
 
         self.title: str = content.pop(0)
         self.codeSource: str = f"chapter{self.id}.py"
-        self.hasCode: bool = path.exists(f"{appPath}/static/{self.codeSource}")
+        self.hasCode: bool = path.exists(f"{appPath}/static/chaptersCode/{self.codeSource}")
 
         try:
-            with open(f"{appPath}/static/{self.codeSource}", "r") as src:
+            with open(f"{appPath}/static/chaptersCode/{self.codeSource}", "r") as src:
                 self.defaultCode = src.read()
         except FileNotFoundError:
             self.defaultCode = ""

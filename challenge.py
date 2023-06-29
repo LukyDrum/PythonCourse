@@ -16,10 +16,10 @@ class Challenge:
         self.answer: int = int(content.pop(0))
 
         self.codeSource: str = f"challenge{self.id}.py"
-        self.hasCode: bool = path.exists(f"{appPath}/static/{self.codeSource}")
+        self.hasCode: bool = path.exists(f"{appPath}/static/challengesCode/{self.codeSource}")
 
         try:
-            with open(f"{appPath}/static/{self.codeSource}", "r") as src:
+            with open(f"{appPath}/static/challengesCode/{self.codeSource}", "r") as src:
                 self.defaultCode = src.read()
         except FileNotFoundError:
             self.defaultCode = ""
