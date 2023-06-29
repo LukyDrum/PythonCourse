@@ -18,10 +18,10 @@ class Challenge:
         self.codeSource: str = f"challenge{self.id}.py"
         self.hasCode: bool = path.exists(f"{appPath}/static/challengesCode/{self.codeSource}")
 
-        try:
+        if self.hasCode:
             with open(f"{appPath}/static/challengesCode/{self.codeSource}", "r") as src:
                 self.defaultCode = src.read()
-        except FileNotFoundError:
+        else:
             self.defaultCode = ""
 
         self.bodyContent: list[str] = []

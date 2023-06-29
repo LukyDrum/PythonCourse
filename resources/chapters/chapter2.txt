@@ -7,4 +7,3 @@ END
 Jak vídíme, tak po spuštění máme na výstupu text "Hello World!".
 Zkuste si změnit textový řetězec (tedy text v uvozovkách) v argumentu na něco jiného a opět spusťte program. Váš nový text by se měl zobrazit na výstupu.
 Pokud by editor hlásil chybu, zkontrolujte si, že text v argumentu je uzavřen v uvozovkách.
-Poznámka: Prvního řádku v kódu není třeba si všimat. Nás zajímá pouze kód, který se nachází za řádkem 'CODE'.
