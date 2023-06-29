@@ -53,9 +53,6 @@ def challenge(id):
     if (request.method == "POST"):
         if (int(request.form["answer"]) == challs[int(id) - 1].answer): state = 1
         else: state = 2
-        defaultCode = ""
-    with open(f"{appPath}/static/{challs[int(id) - 1].codeSource}", "r") as src:
-        defaultCode = src.read()
     return render_template("challenge.html", challenge = challs[int(id) - 1], state = state)
 
 
