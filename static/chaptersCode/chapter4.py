@@ -12,7 +12,7 @@ print("Basic arithmetics:", typeInt + typeFloat, typeInt - typeFloat, typeInt * 
 # Division
 print("Division:", typeInt / 10, typeInt // 10)
 # Comparassions
-print("Comparasion:", 5 == 5, 1 > 5, 12 != 21)
+print("Comparasion:", 5 == 5, 12 != 21)
 
 # Operations with strings
 print("String Operations:", typeString + " NOOOOOOOOOOOOO", len(typeString), "YES" * 3)
