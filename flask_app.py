@@ -30,7 +30,7 @@ def codeEditor(name: str):
         for chall in challs:
             if chall.name == name: defaultCode = chap.defaultCode
 
-    return render_template("codeEditor.html", name = name, defaultCode = defaultCode)
+    return render_template("codeEditor/codeEditor.html", name = name, defaultCode = defaultCode)
 
 
 @app.route("/chapters")
