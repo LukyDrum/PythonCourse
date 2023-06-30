@@ -40,7 +40,7 @@ def chapters():
 
 @app.route("/chapters/chapter<id>")
 def chapter(id):
-    return render_template("chapter.html", chapter = chaps[int(id) - 1])
+    return render_template("chapter.html", chapter = chaps[int(id) - 1], defaultCode = chaps[int(id) - 1].defaultCode)
 
 
 @app.route("/challenges")
