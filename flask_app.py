@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, escape
 from chapter import Chapter
 from challenge import Challenge
 from random import randint
@@ -29,6 +29,7 @@ def codeEditor(name: str):
             if chap.name == name: defaultCode = chap.defaultCode
         for chall in challs:
             if chall.name == name: defaultCode = chall.defaultCode
+
 
     return render_template("codeEditor/codeEditor.html", name = name, defaultCode = defaultCode)
 
