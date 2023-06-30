@@ -31,8 +31,9 @@
     {% if challenge.hasCode %}
         
         <div class="card">
-            <div class="card-body"><iframe src="{{ url_for('codeEditor', name=challenge.name) }}" width="100%" height="600px" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
+            <div class="card-body"><iframe id="editorFrame" src="{{ url_for('static', filename='OnlinePythonEditor/index.html') }}" onload='loadCode("{{ challenge.name }}")' width="100%" height="600px" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
         </div>
+        <button class="btn btn-primary m-2" onclick="saveCode('{{ challenge.name }}')">Save</button>
         
     {% endif %}
 
@@ -56,18 +57,31 @@
             <label for="answer" class="form-label">Vaše odpověď (vždy celé číslo):</label>
             <input name="answer" type="number" class="form-control" id="answer" aria-describedby="answer">
         </div>
-        <button type="submit" class="btn btn-primary">Odeslat</button>
+        <button type="submit" class="btn btn-primary" onclick="saveCode('{{ challenge.name }}')">Odeslat</button>
     </form>
 
     
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='saveLoadCode.js') }}"></script>
     <script>
         window.onload = function() {
             setTimeout(function() {
                 document.getElementById("celebSound").play();
             }, 2000)
+        }
+
+        
+
+        function loadCode(name) {
+            var result = loadStoredCode(name);
+            if (!result) {
+                var defaultCodeBase = `{{ defaultCode }}`
+                var defaultCode = replaceSpecial(defaultCodeBase);
+
+                loadDefaultCode(defaultCode);
+            }
         }
     </script>
 </body>

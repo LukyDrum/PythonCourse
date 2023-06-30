@@ -54,7 +54,7 @@ def challenge(id):
     if (request.method == "POST"):
         if (int(request.form["answer"]) == challs[int(id) - 1].answer): state = 1
         else: state = 2
-    return render_template("challenge.html", challenge = challs[int(id) - 1], state = state)
+    return render_template("challenge.html", challenge = challs[int(id) - 1], state = state, defaultCode = escape(challs[int(id) - 1].defaultCode))
 
 
 @app.route("/overview")
