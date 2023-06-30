@@ -5,6 +5,7 @@ Integer (int): Reprezentuje celé číslo (se znaménkem či bez). Patří mezi 
 Float: Reprezentuje číslo s desetinnou čárkou (se znaménkem či bez). Název je odvozen z anglického 'floating-point number' (číslo s plovoucí desetinnou čárkou). Také patří mezi číselné datové typy. Například číslo 12.55 je typu float.
 String (str): Reprezentuje textový řetězec (text). Textový řetězec vždy zapisujeme do uvozovek. Například textový řetězec "Hello there!" je typu string.
 Boolean (bool): Reprezentuje pravdivostní hodnotu. Může tedy nabývat pouze hodnot True (1) nebo False (0).
+Poznámka: U funkce print nově nastavujeme parametr 'sep'. Ten je použit pro oddělení jednotlivých vyprintěných argumentů. Defaultně je nastaven na mezeru.
 Pojďme se podívat na ukázku kódu.
 V první části deklarujeme proměnnou každého typu, který jsme si výše uvedli. Popořadě to tedy je: Integer, Float, String a Boolean. Tyto proměnné si následně necháme vypsat. Zde se možné zarazíte, co se to děje s funkcí print, předáváme ji totiž rovnou několik argumentů. V případě, kdy funkci print předáme více argumentů, tak je vytiskne všechny.
 V následujícím printu jsou ukázány základní aritmetické operace s číselnými datovými typy (sčítání, odčítání, násobení, dělení).

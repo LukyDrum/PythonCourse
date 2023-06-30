@@ -4,18 +4,18 @@ typeFloat = 69.69
 typeString = "Luke... I AM YOUR FATHER!"
 typeBool = True
 
-print("Variables:", typeInt, typeFloat, typeString, typeBool)
+print(typeInt, typeFloat, typeString, typeBool, sep=", ")
 
 # Operations with number
 # Artimetic operations
-print("Basic arithmetics:", typeInt + typeFloat, typeInt - typeFloat, typeInt * typeFloat, typeInt / typeFloat)
+print(typeInt + typeFloat, typeInt - typeFloat, typeInt * typeFloat, typeInt / typeFloat, sep=", ")
 # Division
-print("Division:", typeInt / 10, typeInt // 10)
+print(typeInt / 10, typeInt // 10, sep=", ")
 # Comparassions
-print("Comparasion:", 5 == 5, 12 != 21)
+print(5 == 5, 5 < 12, 12 != 21, sep=", ")
 
 # Operations with strings
-print("String Operations:", typeString + " NOOOOOOOOOOOOO", len(typeString), "YES" * 3)
+print(typeString + " NOOOOOOOOOOOOO", len(typeString), "YES" * 3, sep=", ")
 
 # Operations with booleans
-print("Bool operations:", not typeBool, True and False, True or False)
+print(not typeBool, True and False, True or False, sep=", ")
