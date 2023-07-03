@@ -1,0 +1,4 @@
+Suma sumárum
+9582
+Nalezněte součet čísel uložených v listu 'numbers'.
+Napověda: Máme-li proměnnou x, pak zápis: x = x + 1, je zcela validní a znamená, že proměnné x nastavujeme hodnotu x zvětšenou o jedna (lze zapsat také jako x += 1; zkrácený zápis). Nastavování hodnot proměnných nejsou matematické rovnice!
