@@ -27,7 +27,7 @@
     <p>Místo kde si můžete jen tak programovat v Pythonu.</p>
 
     <div class="card">
-      <div class="card-body"><iframe id="editorFrame" src="{{ url_for('static', filename='OnlinePythonEditor/index.html') }}" onload="loadCode('playground')" width="100%" height="600px" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
+      <div class="card-body"><iframe id="editorFrame" src="{{ url_for('static', filename='OnlinePythonEditor/index.html') }}" onload="loadStoredCode('playground')" width="100%" height="600px" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
     </div>
     <button class="btn btn-primary m-2" onclick="saveCode('playground')">Save</button>
 
