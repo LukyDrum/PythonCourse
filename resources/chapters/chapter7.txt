@@ -1,0 +1,11 @@
+ For cyklus
+ V této kapitole se seznámíme s 'for' cyklem. V programování je jako cyklus označováno opakování jistého kódu dokud není splněna jistá podmínka (např. není dosaženo tíženého počtu opakování).
+ Jedná se o velmi užitečný konstrukt v programování, který nám dovolí opakovat stejný kód mnohokrát dokola bez nutnosti ho opisovat mnohokrát za sebe. Nejčastěji ho využíváme například pro průchod listem položek (na listy jsme se již podívali dříve).
+ Pojďme se podívat na ukázku kódu.
+Nejprve si vytvoříme krátký list celých čísel.
+Nyní se dostáváme k prvnímu for cyklu. Ten použijeme pro průchod a vytištění všech čísel z listu. Obecně by se to dalo přeložit takto: "Pro každé (nějaká proměnná) v (nějaký seznam) udělet toto (blok kódu)." Zde tedy říkáme, aby pro každé číslé (označené proměnnou 'num') v listu 'numbers', tuto proměnnou num vytisknul. Blok kódu patřící k for cyklu je opět odsazen pomocí tabulátoru (zde do něj tedy patří pouze příkaz print).
+V dalším for cyklu děláme něco podobného, akorát místo nějakého listu zde máme funkci range s argumenty 1 a 6. Jak již napovídá název této funkce, tak tato funkce vlastně vytvoří list celých čísel od prvního argumentu po druhý argument (hodnota druhého argumentu již ve výsledném listu není). 'range(1, 6)' tedy vytvoří list s čísly: 1, 2, 3, 4, 5. Každé toto číslo se postupně uloží do proměnné i a je následně vytištěno.
+END
+V blocích kódu náležících cyklům muže být libovolný kód. Můžete zde tedy vytvářet proměnné, provádět výpočty, používat podmíněné příkazy a dokonce i používat další cykly.
+Na tomto místě doporučuji projít si dosavadní kapitoly (včetně této) ještě jednou od začátku. Prohlídnout si ukázky kódů a vyzkoušet si je upravit.
+Až budete připraveni, tak přejděte do sekce výzvy. Zde na vás bude čekat vícero nových výzev, které otestují nejen vaši znalosti for cyklů.
