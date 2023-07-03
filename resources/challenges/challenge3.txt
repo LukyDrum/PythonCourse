@@ -1,0 +1,3 @@
+Násobárna
+1814400
+Tato výzva je pododobná jako ta minulá. Máte zadaný list čísel a tentokrát je vaším úkolem vypočítat hodnotu všech čísel vynásobených dohromady (tedy jejich produkt).
