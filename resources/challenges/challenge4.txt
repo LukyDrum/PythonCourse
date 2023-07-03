@@ -1,0 +1,8 @@
+Sudy
+486
+Ještě jednu výzvu se zdržíme u for cyklů. Tenktorát však budeme muset využít i znalost podmíněných příkazů (if/else). Opět budete mít zadaný list celých čísel a vaším ukolem bude spočítat součet všech SUDÝCH čísel v tomto listu.
+DULEŽITÁ NÁPOVĚDA: Budete potřebovat operátor modulu, je značen symbolem: %. Jeho funkce je, že vrací zbytek po celočíselném dělení. Například tedy:
+5 % 2 je 1
+10 % 5 je 0
+14 % 6 je 2
+Pokud stále nechápete jeho funkci, tak si vygooglete: "operátor modulo"
